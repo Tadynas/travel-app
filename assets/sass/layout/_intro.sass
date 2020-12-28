@@ -1,0 +1,87 @@
+#intro
+  background-image: url(../images/beach.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: -180px 0
+  height: 100vh
+  display: flex
+  align-items: flex-end
+  padding-bottom: 50px
+
+  .container
+    width: 100%
+
+    .intro__card
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      color: white
+      position: relative
+      backdrop-filter: blur( 50px )
+      border-radius: 20px
+      padding: 24px
+
+      &__title, &__button
+        width: 100%
+
+      &__title
+        margin-bottom: 16px
+
+      &__button
+        margin-top: 24px
+
+      &__hotel-info
+        .location
+          margin-bottom: 6px
+
+        .location, .rating
+          display: flex
+          align-items: center
+
+          img
+            margin-right: 8px
+
+      &__price-info
+        .price
+          display: flex
+          align-items: flex-end
+
+          &__big
+            font-size: 2.4rem
+            font-weight: $bold
+
+            span
+              font-size: 1.4rem
+
+          &__small
+            font-size: 1.8rem 
+            font-weight: $medium
+            margin-right: 8px
+
+            em
+              text-decoration: line-through
+              
+            span
+              font-size: 1.2rem     
+
+        .accommodation-type
+          display: flex
+          align-items: center
+
+          img
+            margin-right: 8px
+
+    .intro__link
+      text-align: center
+      margin-top: 16px
+
+      button
+        border: none
+        color: white
+        font-family: $font-primary
+        background-color: transparent
+        background-image: url(../images/icons/arrow-down.svg)
+        background-repeat: no-repeat
+        background-position: center right
+        padding-right: 20px

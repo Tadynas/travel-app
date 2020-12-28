@@ -9,7 +9,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello World</h1>
+  <header>
+    <div class="container">
+      <div class="header__menu">
+        <div class="header__menu__button">
+          <i>
+            <img src="assets/images/icons/arrow-back.svg" alt="Back button">
+          </i>
+        </div>
+        <div class="header__menu__button">
+          <i>
+            <div class="burger-menu">
+              <div class="burger-menu__line"></div>
+              <div class="burger-menu__line"></div>
+              <div class="burger-menu__line"></div>
+            </div>
+          </i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="intro">
+      <div class="container">
+        <div class="intro__card">
+          <div class="features-wrapper">
+            <span class="features features--orange">beach</span>
+            <span class="features features--blue">extraordinary</span>
+          </div>
+          <h1 class="intro__card__title">Temptation</br>Cancun Resort</h1>
+          <div class="intro__card__hotel-info">
+            <div class="location">
+              <img src="assets/images/icons/location.svg" alt="Location">
+              <span>Cancun, Mexico</span>
+            </div>
+            <div class="rating">
+              <img src="assets/images/icons/stars.svg" alt="4 Stars">
+              <span>4 stars</span>
+            </div>
+          </div>
+          <div class="intro__card__price-info">
+            <div class="price">
+              <div class="price__small">
+                <span>$</span>
+                <em>399</em>
+              </div>
+              <div class="price__big">
+                <span>$</span>
+                <em>329</em>
+              </div>
+            </div>
+            <div class="accommodation-type">
+              <img src="assets/images/icons/persons.svg" alt="Two people">
+              <span>/ per night</span>
+            </div>
+          </div>
+          <button class="intro__card__button button button--green">Check Availability</button>
+        </div>
+        <div class="intro__link">
+          <button>More details</button>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 <script src="assets/js/min/script-min.js"></script>
 </html>
