@@ -7,3 +7,21 @@ header
     &__menu
       display: flex    
       justify-content: space-between
+
+      &__button
+        width: 48px
+        height: 48px
+        display: flex
+        align-items: flex-start
+        &:last-child
+          justify-content: flex-end
+
+        &.active
+          .burger-menu__line
+            &:nth-child(1)
+              transform: rotate(45deg) translateY(8px)
+            &:nth-child(2)
+              opacity: 0
+            &:nth-child(3)
+              transform: rotate(-45deg) translateY(-8px)
+              
