@@ -14,11 +14,13 @@
   const moreDetailsBtn = document.querySelector('.js-more-details')
   const backBtn = document.querySelector('.js-back')
 
+  const detailTitle = document.querySelector('.js-detail-title')
+
   const detailsPane = new CupertinoPane('#details', { 
       parentElement: 'main',
       initialBreak: 'top',
       breaks: { 
-        top: { enabled: true, height: window.innerHeight-45 },
+        top: { enabled: true, height: window.innerHeight-45},
         middle: { enabled: false },
         bottom: { enabled: true, height: 0 }
       },
@@ -26,16 +28,39 @@
       pushYOffset: 50,
       backdrop: true,
       buttonClose: false,
-      bottomClose: true
+      bottomClose: true,
+      onWillDismiss: () => {
+        detailTitle.classList.remove('active')
+        backBtn.classList.remove('active')
+      }
     }
   )
 
   moreDetailsBtn.addEventListener('click', () => {
     detailsPane.present({animate: true})
+    detailTitle.classList.add('active')
+    backBtn.classList.add('active')
   })
 
   backBtn.addEventListener('click', () => {
     detailsPane.hide()
+    detailTitle.classList.remove('active')
+    backBtn.classList.remove('active')
+  })
+}
+
+{
+  const details = document.querySelector('#details') 
+  const availabilityBar = document.querySelector('.js-availability-bar')
+
+  details.addEventListener('scroll', () => {
+    if(((details.scrollHeight - window.innerHeight + 45) - details.scrollTop) < 200) {
+      if(!availabilityBar.classList.contains('hidden')) {
+        availabilityBar.classList.add('hidden')
+      }
+    } else if(availabilityBar.classList.contains('hidden')) {
+      availabilityBar.classList.remove('hidden')
+    }
   })
 }
 

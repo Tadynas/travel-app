@@ -5,12 +5,16 @@
   outline: none
 
 body
-  position: relative
-  margin: 0 auto
-  max-width: 768px
-
   &.disable
     overflow-y: hidden
+
+.viewport
+  position: relative
+  margin: 0 auto
+  max-width: 375px
+  box-shadow: 0 0 20px transparentize(#0D2750, 0.5)
+  background-color: $light-grey
+  overflow: hidden
 
 .container
   padding: 0 16px

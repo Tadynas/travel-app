@@ -1,12 +1,19 @@
 #nav
   background-color: $green
-  position: fixed
+  position: absolute
   width: 100%
   height: 100%
   top: 0
   left: 0
   transform: translateX(100%)
-  transition: transform 0.5s ease-in-out
+  transition: transform 0.5s ease
+  z-index: 12
+  
+  .nav__logo
+    position: absolute
+    top: 16px
+    left: 16px
+    width: 200px
 
   &.active
     transform: translateX(0)
