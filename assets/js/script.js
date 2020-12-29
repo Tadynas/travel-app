@@ -16,6 +16,8 @@
 
   const detailTitle = document.querySelector('.js-detail-title')
 
+  const tooltip = document.querySelector('.js-tooltip')
+  
   const detailsPane = new CupertinoPane('#details', { 
       parentElement: 'main',
       initialBreak: 'top',
@@ -32,6 +34,11 @@
       onWillDismiss: () => {
         detailTitle.classList.remove('active')
         backBtn.classList.remove('active')
+      },
+      onDrag: () => {
+        if(tooltip.classList.contains('active')) {
+          tooltip.classList.remove('active')
+        }
       }
     }
   )
@@ -60,6 +67,18 @@
       }
     } else if(availabilityBar.classList.contains('hidden')) {
       availabilityBar.classList.remove('hidden')
+    }
+  })
+}
+
+{
+  const tooltip = document.querySelector('.js-tooltip')
+
+  window.addEventListener('click', (e) => {
+    if(e.path.includes(tooltip) && !tooltip.classList.contains('active')) {
+      tooltip.classList.add('active')
+    } else if(tooltip.classList.contains('active')) {
+      tooltip.classList.remove('active')
     }
   })
 }

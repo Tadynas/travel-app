@@ -2,7 +2,7 @@ header
   padding-top: 16px
   position: absolute
   width: 100%
-  z-index: 12
+  z-index: 100
 
   .header
     &__menu
@@ -16,35 +16,32 @@ header
         align-items: flex-start
 
         &.back-button
+          pointer-events: none
           opacity: 0
           transform: translateY(5px)
           transition: all 0.3s ease
 
           &.active
+            pointer-events: auto
             opacity: 1
             transform: translateY(0)
 
         &:last-child
           justify-content: flex-end
-
-        &.active
-          .burger-menu__line
-            &:nth-child(1)
-              transform: rotate(45deg) translate(4.25px, 4.25px)
-            &:nth-child(2)
-              opacity: 0
-            &:nth-child(3)
-              transform: rotate(-45deg) translate(4.25px, -4.25px)
               
   .detail-title
+    position: absolute
+    top: 16px
+    left: 50%
     font-size: 1.6rem
     line-height: 1.6rem
     color: white
+    white-space: nowrap
     opacity: 0
-    transform: translateY(5px)
+    transform: translate(-50%, 5px)
     transition: all 0.3s ease
 
     &.active
       opacity: 1
-      transform: translateY(0)
+      transform: translate(-50%, 0)
 

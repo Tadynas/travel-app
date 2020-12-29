@@ -1,6 +1,22 @@
 .burger-menu
-  position: relative
-  z-index: 13
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  position: absolute
+  top: 16px
+  right: 16px
+  width: 30px
+  height: 30px
+  z-index: 1002
+
+  &.active
+    .burger-menu__line
+      &:nth-child(1)
+        transform: rotate(45deg) translate(4.25px, 4.25px)
+      &:nth-child(2)
+        opacity: 0
+      &:nth-child(3)
+        transform: rotate(-45deg) translate(4.25px, -4.25px)
 
   &__line
     width: 16px
