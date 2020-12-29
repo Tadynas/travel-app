@@ -83,3 +83,16 @@
   })
 }
 
+{
+  const intro = document.querySelector('.js-intro')
+  
+  window.addEventListener('load', () => {
+    const vh = window.innerHeight * 0.01
+    intro.style.height = `${vh * 100}px`;
+  });
+
+  window.addEventListener('resize', () => {
+    const vh = window.innerHeight * 0.01
+    intro.style.height = `${vh * 100}px`;
+  });
+}
