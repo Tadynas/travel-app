@@ -1,0 +1,137 @@
+#details
+  padding-top: 40px
+
+  .details__item
+    margin-bottom: 30px
+
+    &__title
+      margin-bottom: 9px
+    
+    &__feature-list
+      display: flex
+      flex-wrap: wrap
+      margin-top: 19px
+      .feature-list__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: calc(100% / 3)
+        margin-bottom: 15px
+
+        &__img
+          width: 40px
+          height: 40px
+          border-radius: 8px
+          background-color: $green
+          background-repeat: no-repeat
+          background-position: center
+          margin-bottom: 8px
+
+        &__title
+          text-align: center
+          color: $dark-grey
+
+    &__info-list
+      display: flex
+      margin: 0 -8px
+
+      .info-list__item
+        position: relative
+        height: 0
+        padding-top: 33%
+        width: 50%
+        margin: 0 8px
+        box-shadow: 0 0 16px transparentize(#0D2750, .7)
+        border-radius: 16px
+
+        &__img
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-repeat: no-repeat
+          background-size: cover
+          background-position: center
+          border-radius: 16px
+
+          .img__title
+            position: absolute
+            padding: 7px 16px
+            backdrop-filter: blur( 50px )
+            border-bottom-left-radius: 16px
+            border-bottom-right-radius: 16px
+            bottom: 0
+            left: 0
+            width: 100%
+
+            h3
+              color: white
+
+    &__price-list
+      display: flex
+      margin-bottom: 16px 
+      margin-top: 25px
+      .price-list__primary-price
+        position: relative 
+        padding: 24px 16px 15px 16px
+        background-color: $green
+        color: white
+        width: 40%
+        margin-right: 4px
+        text-align: right
+        border-radius: 16px
+        box-shadow: 0 3px 6px transparentize(#0D2750, 0.8)
+        text-decoration: none
+        .save-tag
+          position: absolute
+          padding: 4px 9px
+          border-radius: 8px
+          font-weight: $regular
+          top: 0
+          right: 16px
+          transform: translateY(-50%)
+          background-color: $orange
+          color: white
+          text-transform: uppercase
+          font-size: 1.2rem
+        &__img
+          background-repeat: no-repeat
+          background-size: contain
+          height: 18px
+        span
+          font-weight: $medium
+          font-size: 1.8rem
+          em
+            font-size: 1.2rem
+      .price-list__secondary-price-list
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 60%
+        margin-left: 4px
+        .secondary-price-list__item
+          display: flex
+          justify-content: space-between
+          align-items: center
+          background-color: white
+          padding: 0 16px
+          color: $green
+          height: calc(50% - 4px)
+          border-radius: 16px
+          box-shadow: 0 3px 6px transparentize(#0D2750, 0.8)
+          text-decoration: none
+          &__img
+            background-repeat: no-repeat
+            background-size: contain
+            height: 16px
+            width: 100%
+          span
+            white-space: nowrap
+            em
+              font-size: 0.8rem
+
+    &__img
+      border-radius: 16px
+      margin-bottom: 16px
+      width: 100%

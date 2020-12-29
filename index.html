@@ -19,9 +19,10 @@
     </nav>
     <div class="container">
       <div class="header__menu">
-        <div class="header__menu__button">
+        <div class="header__menu__button js-back">
           <img src="assets/images/icons/arrow-back.svg" alt="Back button">
         </div>
+        <h1 class="detail-title">Temptation Cancun Resort</h1>
         <div class="header__menu__button js-burger-menu">
           <div class="burger-menu">
             <div class="burger-menu__line"></div>
@@ -70,11 +71,115 @@
           <button class="intro__card__button button button--green">Check Availability</button>
         </div>
         <div class="intro__link">
-          <button>More details</button>
+          <button class="js-more-details">More details</button>
         </div>
+      </div>
+    </section>
+    <section id="details">
+      <div class="container">
+        <div class="details__item">
+          <h2 class="details__item__title">About</h2>
+          <p>Get ready for your holidays in Mexico! Grab this hot offer to a 4-stars Temptation Cancun Resort and get quality at a much lower price!</p>
+        </div>
+        <div class="details__item">
+          <h2 class="details__item__title">What's Included</h2>
+          <div class="details__item__feature-list">
+            <div class="feature-list__item">
+              <div class="feature-list__item__img" style="background-image: url(assets/images/icons/eye.svg);"></div>
+              <span class="feature-list__item__title">Room Garden View</span>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__item__img" style="background-image: url(assets/images/icons/all-inclusive.svg);"></div>
+              <span class="feature-list__item__title">All-Inclusive</span>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__item__img" style="background-image: url(assets/images/icons/pool.svg);"></div>
+              <span class="feature-list__item__title">3 Outdoor Pools</span>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__item__img" style="background-image: url(assets/images/icons/local-dining.svg);"></div>
+              <span class="feature-list__item__title">2 Dining Areas</span>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__item__img" style="background-image: url(assets/images/icons/local-bar.svg);"></div>
+              <span class="feature-list__item__title">Bar</span>
+            </div>
+            <div class="feature-list__item">
+              <div class="feature-list__item__img" style="background-image: url(assets/images/icons/wifi.svg);"></div>
+              <span class="feature-list__item__title">Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+        <div class="details__item">
+          <h2 class="details__item__title">Learn More</h2>
+          <div class="details__item__info-list">
+            <a href="#" class="info-list__item">
+              <div class="info-list__item__img" style="background-image: url(assets/images/hotel.png);">
+                <div class="img__title">
+                  <h3>Hotel</h3>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="info-list__item">
+              <div class="info-list__item__img" style="background-image: url(assets/images/room.png);">
+                <div class="img__title">
+                  <h3>Room</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="details__item">
+          <h2 class="details__item__title">Best Price Guaranteed</h2>
+          <div class="details__item__price-list">
+            <a href="#" class="price-list__primary-price">
+              <span class="save-tag">Save $133</span>
+              <div class="price-list__primary-price__img" style="background-image: url(assets/images/logos/roomhustlers.svg);"></div>
+              <span><em>$ </em>329</span>
+            </a>
+            <div class="price-list__secondary-price-list">
+              <a href="#" class="secondary-price-list__item">
+                <div class="secondary-price-list__item__img" style="background-image: url(assets/images/logos/bookingcom.svg);"></div>
+                <span><em>$ </em>462</span>
+              </a>
+              <a href="#" class="secondary-price-list__item">
+                <div class="secondary-price-list__item__img" style="background-image: url(assets/images/logos/expedia.svg);"></div>
+                <span><em>$ </em>662</span>
+              </a>
+            </div>
+          </div>
+          <p>Roomhustlers member’s price has been recorded on the 2nd of DEC, 2020 for the 1-3th of JUL, 2021. T... <a href="#" class="dark">Read more</a></p>
+        </div>
+        <div class="details__item">
+          <h2 class="details__item__title">Location</h2>
+          <img src="assets/images/map.png" alt="Location" class="details__item__img">
+          <p>Blvd. Kukulkan Km 3.5, Zona Hotelera </br> 77500 Cancun, QR, Mexico</p>
+        </div>
+      </div>
+      <div class="newsletter">
+        <h1 class="newsletter__title">Don't miss cheapest hotel deals!</h1>
+        <form class="newsletter__form">
+          <input type="text" placeholder="Enter Your Email">
+          <button class="button button--white">Subscribe</button>
+        </form>
+        <a href="#" class="light">Why Roomhustlers?</a>
+      </div>
+      <div class="availability-bar">
+        <div class="availability-bar__info">
+          <div class="availability-bar__info__top">
+            <img src="assets/images/icons/info-outline.svg" alt="Info">
+            <span><em>$ </em>329</span>
+          </div>
+          <div class="availability-bar__info__bottom">
+            <img src="assets/images/icons/persons-dark.svg" alt="Two people">
+            <span>/ per night</span>
+          </div>
+        </div>
+        <button class="button button--green">Check Availability</button>
       </div>
     </section>
   </main>
 </body>
+<script src="https://unpkg.com/cupertino-pane/dist/cupertino-pane.min.js"></script>
 <script src="assets/js/min/script-min.js"></script>
 </html>

@@ -19,7 +19,7 @@
       color: white
       position: relative
       backdrop-filter: blur( 50px )
-      border-radius: 20px
+      border-radius: 20px !important
       padding: 24px
 
       &__title, &__button
@@ -81,7 +81,10 @@
         color: white
         font-family: $font-primary
         background-color: transparent
-        background-image: url(../images/icons/arrow-down.svg)
-        background-repeat: no-repeat
-        background-position: center right
-        padding-right: 20px
+
+        &::after
+          content: url(../images/icons/arrow-down.svg)
+          margin-left: 8px
+          position: absolute
+          animation: slide-down 1s linear infinite
+          
