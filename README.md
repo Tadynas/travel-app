@@ -1,4 +1,4 @@
-## Travel App [(Live Version)](https://tadynas.github.io/travel-app/index.html)
+## Travel App (Mobile version) [(Live Version)](https://tadynas.github.io/travel-app/index.html)
 
 Stylized travel app created with HTML, SASS and JS
 
