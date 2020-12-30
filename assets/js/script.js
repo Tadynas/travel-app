@@ -18,36 +18,7 @@
 
   const tooltip = document.querySelector('.js-tooltip')
   
-  let detailsPane = null
-
-  moreDetailsBtn.addEventListener('click', () => {
-    detailsPane.present({animate: true})
-    detailTitle.classList.add('active')
-    backBtn.classList.add('active')
-  })
-
-  backBtn.addEventListener('click', () => {
-    detailsPane.hide()
-    detailTitle.classList.remove('active')
-    backBtn.classList.remove('active')
-  })
-
-  window.addEventListener('load', () => {
-    if(detailsPane) {
-      detailsPane.destroy()
-    }
-    initializePane()
-  });
-
-  window.addEventListener('resize', () => {
-    if(detailsPane) {
-      detailsPane.destroy()
-    }
-    initializePane()
-  });
-
-  function initializePane() {
-    detailsPane = new CupertinoPane('#details', { 
+  const detailsPane = new CupertinoPane('#details', { 
       parentElement: 'main',
       initialBreak: 'top',
       breaks: { 
@@ -69,8 +40,29 @@
           tooltip.classList.remove('active')
         }
       }
-    })
-  }
+    }
+  )
+
+  moreDetailsBtn.addEventListener('click', () => {
+    detailsPane.screen_height = window.innerHeight
+    detailsPane.present({animate: true})
+    detailTitle.classList.add('active')
+    backBtn.classList.add('active')
+  })
+
+  backBtn.addEventListener('click', () => {
+    detailsPane.hide()
+    detailTitle.classList.remove('active')
+    backBtn.classList.remove('active')
+  })
+
+  // window.addEventListener('resize', () => {
+  //   const pane = document.querySelector('.pane')
+  //   // console.log(window.innerHeight-parseInt(pane.style.height)-45)
+  //   console.log(detailsPane)
+  //   detailsPane.screen_height = window.innerHeight
+
+  // });  
 }
 
 {
