@@ -18,7 +18,36 @@
 
   const tooltip = document.querySelector('.js-tooltip')
   
-  const detailsPane = new CupertinoPane('#details', { 
+  let detailsPane = null
+
+  moreDetailsBtn.addEventListener('click', () => {
+    detailsPane.present({animate: true})
+    detailTitle.classList.add('active')
+    backBtn.classList.add('active')
+  })
+
+  backBtn.addEventListener('click', () => {
+    detailsPane.hide()
+    detailTitle.classList.remove('active')
+    backBtn.classList.remove('active')
+  })
+
+  window.addEventListener('load', () => {
+    if(detailsPane) {
+      detailsPane.destroy()
+    }
+    initializePane()
+  });
+
+  window.addEventListener('resize', () => {
+    if(detailsPane) {
+      detailsPane.destroy()
+    }
+    initializePane()
+  });
+
+  function initializePane() {
+    detailsPane = new CupertinoPane('#details', { 
       parentElement: 'main',
       initialBreak: 'top',
       breaks: { 
@@ -40,20 +69,8 @@
           tooltip.classList.remove('active')
         }
       }
-    }
-  )
-
-  moreDetailsBtn.addEventListener('click', () => {
-    detailsPane.present({animate: true})
-    detailTitle.classList.add('active')
-    backBtn.classList.add('active')
-  })
-
-  backBtn.addEventListener('click', () => {
-    detailsPane.hide()
-    detailTitle.classList.remove('active')
-    backBtn.classList.remove('active')
-  })
+    })
+  }
 }
 
 {
@@ -85,17 +102,14 @@
 
 {
   const intro = document.querySelector('.js-intro')
-  const pane = document.querySelector('.pane')
   
   window.addEventListener('load', () => {
     const vh = window.innerHeight * 0.01
     intro.style.height = `${vh * 100}px`;
-    pane.style.height = `${vh * 100}px`;
   });
 
   window.addEventListener('resize', () => {
     const vh = window.innerHeight * 0.01
     intro.style.height = `${vh * 100}px`;
-    pane.style.height = `${vh * 100}px`;
   });
 }
