@@ -85,29 +85,17 @@
 
 {
   const intro = document.querySelector('.js-intro')
+  const pane = document.querySelector('.pane')
   
   window.addEventListener('load', () => {
     const vh = window.innerHeight * 0.01
     intro.style.height = `${vh * 100}px`;
+    pane.style.height = `${vh * 100}px`;
   });
 
   window.addEventListener('resize', () => {
     const vh = window.innerHeight * 0.01
     intro.style.height = `${vh * 100}px`;
+    pane.style.height = `${vh * 100}px`;
   });
-}
-
-{
-  document.body.addEventListener("focus", event => {
-    const target = event.target;
-    switch (target.tagName) {
-        case "INPUT":
-        case "TEXTAREA":
-        case "SELECT":
-            document.body.classList.add("keyboard");
-    }
-  }, true); 
-  document.body.addEventListener("blur", () => {
-    document.body.classList.remove("keyboard");
-  }, true); 
 }
