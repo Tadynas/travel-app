@@ -54,8 +54,10 @@
     detailsPane.hide()
     detailTitle.classList.remove('active')
     backBtn.classList.remove('active')
-  })
+  })  
+}
 
+{
   window.addEventListener('resize', () => {
     const pane = document.querySelector('.pane')
     const details = document.querySelector('#details')
@@ -63,7 +65,7 @@
       pane.style.height = `${window.innerHeight-45}px`
       details.style.height = `${window.innerHeight-45}px`
     }
-  });  
+  });
 }
 
 {
