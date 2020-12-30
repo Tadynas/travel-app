@@ -56,13 +56,14 @@
     backBtn.classList.remove('active')
   })
 
-  // window.addEventListener('resize', () => {
-  //   const pane = document.querySelector('.pane')
-  //   // console.log(window.innerHeight-parseInt(pane.style.height)-45)
-  //   console.log(detailsPane)
-  //   detailsPane.screen_height = window.innerHeight
-
-  // });  
+  window.addEventListener('resize', () => {
+    const pane = document.querySelector('.pane')
+    const details = document.querySelector('#details')
+    if(pane) {
+      pane.style.height = `${window.innerHeight-45}px`
+      details.style.height = `${window.innerHeight-45}px`
+    }
+  });  
 }
 
 {
